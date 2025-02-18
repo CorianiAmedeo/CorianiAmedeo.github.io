@@ -25,7 +25,7 @@ function animate() {
 
 	renderer.render( scene, camera );
 }
-*/
+
 
 const r = new Rive({
     src: "/dwtd_-_electrical_wire.riv",
@@ -66,3 +66,4 @@ r.on(EventType.RiveEvent, onRiveEventReceived);
 console.log("Prova");
 // Can unsubscribe to Rive Events at any time via the off() API like below
 // r.off(EventType.RiveEvent, onRiveEventReceived);
+*/
