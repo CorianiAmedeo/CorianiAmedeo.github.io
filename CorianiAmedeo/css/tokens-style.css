@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* Z-INDEX */
+  --top-navigation: 1000;
+  --resume-cta: 700;
+
+  /* TYPOGRAPHY */
+  --ff: "Inter", sans-serif;
+  --weight-multyplier: 0.85;
+  --letter-spacing-multyplier: 1.5;
+
+  --logotype: calc(500 * var(--weight-multyplier)) 1.125rem/1em var(--ff);
+  --logotype-spacing: -0.025em;
+
+  --h1: calc(500 * var(--weight-multyplier)) 3.75rem/1em var(--ff);
+  --h2: calc(500 * var(--weight-multyplier)) 2.5rem/1.3em var(--ff);
+  --h3: calc(400 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
+  
+  --p: calc(300 * var(--weight-multyplier)) 1rem/1.5em var(--ff);
+  --p-spacing: calc(0.01rem * var(--letter-spacing-multyplier));
+  --on-primary-p: 300 1rem/1.5em var(--ff);
+  --on-primary-p-spacing: 0.01rem;
+
+  /* SURFACE COLORS */
+  --surface-hue: 210;
+  --surface: hsl(var(--surface-hue), 4%, 4%);
+  --surface-high: hsl(var(--surface-hue), 4%, 7%);
+  --surface-highest: hsl(var(--surface-hue), 4%, 10%);
+  --surface-max: hsl(var(--surface-hue), 4%, 13%);
+
+  /* ON SURFACE COLORS */
+  --on-surface-hue: 0;
+  --on-surface: hsl(var(--on-surface-hue), 0%, 95%);
+  --on-surface-var: hsl(var(--on-surface-hue), 0%, 70%);
+  --on-surface-dim: hsl(var(--on-surface-hue), 0%, 60%);
+
+  --on-surface-active: hsla(var(--on-surface-hue), 0%, 95%, 0.05);
+
+  /* BORDERS and LINES */
+  --outline-color: hsl(var(--on-surface-hue), 0%, 35%);
+  --outline: solid 1px var(--outline-color);
+  --grid: hsla(var(--surface-hue), 8%, 16%, 1);
+  --grid-var: hsla(0, 0%, 8%, 1);
+
+  /* PRIMARY, SECONDARY, TERTIARY COLORS */
+  --primary: hsl(210, 95%, 45%);
+  --primary-hover: hsl(210, 90%, 50%);
+  --on-primary: hsl(0, 0%, 100%);
+
+  /* STRUCTURE */
+  --container-maxwidth: 61.25rem;
+  --section-text-maxwidth: 37.25rem;
+  --section-smalltext-maxwidth: 20rem;
+
+  --margin-smaller: 0.5rem;
+  --margin-small: 1rem;
+  --margin: 1.5rem;
+  --margin-medium:2rem;
+  --margin-large: 2.5rem; 
+  --margin-larger: 3rem;
+  
+  --section-margin-small: 4rem;
+  --section-margin-normal: 6rem;
+  --section-margin-medium: 8rem;
+  --section-margin-large: 10rem;
+
+}
+
+@media (prefers-color-scheme: light){
+  :root {
+    /* TYPOGRAPHY */
+    --weight-multyplier: 1;
+    --letter-spacing-multyplier: 1;
+
+    --logotype-spacing: -0.02em;
+
+    /* SURFACE COLORS */
+    --surface: hsl(var(--surface-hue), 4%, 87%);
+    --surface-high: hsl(var(--surface-hue), 4%, 90%);
+    --surface-highest: hsl(var(--surface-hue), 4%, 93%);  
+    --surface-max: hsl(var(--surface-hue), 4%, 96%);
+  
+    /* ON SURFACE COLORS */
+    --on-surface-hue: 0;
+    --on-surface: hsl(var(--on-surface-hue), 0%, 5%);
+    --on-surface-var: hsl(var(--on-surface-hue), 0%, 25%);
+    --on-surface-dim: hsl(var(--on-surface-hue), 0%, 40%);
+
+    --on-surface-active: hsla(var(--on-surface-hue), 0%, 5%, 0.05);
+
+    /* BORDERS and LINES */
+    --outline-color: hsl(var(--on-surface-hue), 0%, 65%);
+    --outline: solid 1px var(--outline-color);
+    --grid: hsla(var(--surface-hue), 8%, 75%, 1);
+    --grid-var: hsla(0, 0%, 85%, 1);
+  }
+}
+
+
+html, body {
+    margin: 0;
+    background-color: var(--surface);
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--on-surface);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+.title-centered {
+    text-align: center;
+}
+
+p {
+    margin: 1.25rem 0 1.25rem 0;
+    font: var(--p);
+    letter-spacing: var(--p-spacing);
+    color: var(--on-surface-var);
+}
+
+a {
+    text-decoration: none;
+}
