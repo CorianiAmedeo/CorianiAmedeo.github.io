@@ -1,35 +1,9 @@
-@media screen and (max-width: 734px) {
-  .section-container {
-    padding: 0;
-  }
-  
-  .anim-carousel {
-    border-top: var(--outline);
-    border-bottom: var(--outline);
-  }
-
-  .anim-carousel-content {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 734px) {
-  .section-container {
-    padding: 0 var(--margin-small) 0 var(--margin-small);
-  }
-
-  .anim-carousel {
-    border: var(--outline);
-  }
+.section-after-hero {
+  margin-bottom: var(--section-margin-small);
 }
 
 .section {
   margin-top: var(--section-margin-large);
-  margin-bottom: var(--section-margin-small);
-}
-
-.section-after-hero {
   margin-bottom: var(--section-margin-small);
 }
 
@@ -41,7 +15,7 @@
   height: 100%;
 }
 
-.section-container {
+.section-container, .card-container  {
   margin: auto;
   margin-top: var(--margin-larger);
 
@@ -49,11 +23,11 @@
   height: 100%;
 }
 
-.anim-carousel {
+.carousel {
   background-color: var(--surface-highest);
 }
 
-.anim-carousel-progress {
+.carousel-progress {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -62,11 +36,11 @@
   list-style-type: none;
   background-color: var(--surface-high);
 
-  font: calc(400 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
+  font: calc(300 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
   color: var(--on-surface-dim);
 }
 
-.anim-carousel-progress > li {
+.carousel-progress > li {
   z-index: 100;
 
   display: flex;
@@ -78,7 +52,7 @@
   cursor: pointer;
 }
 
-.anim-carousel-progress > li > div {
+.carousel-progress > li > div {
   z-index: 100;
 
   display: flex;
@@ -90,36 +64,15 @@
   background-color: var(--surface-high);
 }
 
-.anim-carousel-progress > .active {
-  font: calc(500 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
+.carousel-progress > .active {
   color: var(--on-surface);
 }
 
-.anim-carousel-progress > li:hover {
-  font: calc(500 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
+.carousel-progress > li:hover {
   color: var(--on-surface);
 }
 
-.anim-carousel-content {
-  display: flex;
-  justify-content: space-between;
-
-  margin: auto;
-  padding: var(--margin-small);
-  max-width: calc(var(--container-maxwidth) - ((var(--container-maxwidth) - var(--section-text-maxwidth)) / 2));
-}
-
-.anim-carousel-text {
-  max-width: var(--section-smalltext-maxwidth);
-}
-
-.anim-carousel-anim {
-  background-color: white;
-  width: 100px;
-  height: 100px;
-}
-
-#anim-carousel-progressbar {
+#carousel-progressbar {
   position: relative;
   margin-left: calc(var(--margin-medium) / 2 + var(--margin-smaller));
   margin-right: calc(var(--margin-medium) / 2 + var(--margin-smaller));
@@ -130,9 +83,85 @@
   height: 1px;
 }
 
-
-#anim-carousel-progressbar-progress{
+#carousel-progressbar-progress{
   background-color: var(--on-surface);
   height: 100%;
   width: 32%;
+}
+
+.skill-selection {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  font: calc(300 * var(--weight-multyplier)) 1.25rem/1.3em var(--ff);
+  color: var(--on-surface);
+}
+
+.skill-selection > li {
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--margin-larger); 
+
+  min-width: 10rem;
+
+  border-top: solid 1px var(--surface);
+  border-left: solid 1px var(--surface);
+  border-right: solid 1px var(--surface);
+
+  background-color: var(--primary);
+
+  cursor: pointer;
+}
+
+.skill-selection > li:hover {
+  background-color: var(--primary-hover);
+}
+
+.skill-selection > li:first-child{
+  border-left: solid 1px var(--primary);
+}
+
+.skill-selection > li:last-child{
+  border-right: solid 1px var(--primary);
+}
+
+.skill-selection > .active:first-child{
+  border-left: var(--outline);
+}
+
+.skill-selection > .active:last-child{
+  border-right: var(--outline);
+}
+
+.skill-selection > .active {
+  color: var(--on-surface-var);
+  border-top: var(--outline);
+  background-color: var(--surface-high);
+}
+
+.skill-selection > .active:hover  {
+  background-color: var(--surface-high);
+  cursor: default;
+}
+.more {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.more-card {
+  margin: auto;
+  max-width: calc((var(--container-maxwidth) / 2) - var(--margin-medium));
+  flex-grow: 1;
+  border: var(--outline);
+  background-color: var(--surface-highest);
 }
